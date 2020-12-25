@@ -1,0 +1,88 @@
+.Weather {
+  background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
+    radial-gradient(
+      91% 146%,
+      rgba(255, 255, 255, 0.5) 47%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  background-blend-mode: screen;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+.Weather .lastUpdated {
+  font-size: 10px;
+}
+
+.Weather .currentDateTime {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.Weather .description {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.Weather .weatherWrapper {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.Weather .currentTemperature {
+  font-size: 75px;
+  font-weight: 900;
+  left: 20px;
+  line-height: 80px;
+  position: relative;
+}
+
+.Weather .units {
+  font-size: 20px;
+  font-weight: 400;
+  left: 30px;
+  position: relative;
+  top: -40px;
+}
+
+.Weather .units .active {
+  color: #ffffff;
+  cursor: default;
+  font-weight: 900;
+}
+
+.Weather .units .active:hover {
+  text-decoration: none;
+}
+
+.Weather .highLowTemps {
+  line-height: 1px;
+}
+
+.Weather img.currentTempIcon {
+  display: block;
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+}
+
+.Weather .details {
+  border-bottom: thin solid #2b2f70;
+  max-width: 120px;
+  margin-bottom: 5px;
+  text-align: start;
+}
+
+.Weather ul {
+  list-style: none;
+  text-align: start;
+  padding: 0;
+}
+
+.Weather li {
+  font-size: 10px;
+}

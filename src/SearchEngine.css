@@ -1,0 +1,9 @@
+.SearchEngine form {
+  padding: 30px 30px 1px 30px;
+}
+
+.SearchEngine .searchIcon {
+  display: inline-block;
+  position: relative;
+  right: 30px;
+}

@@ -1,0 +1,18 @@
+.Footer footer {
+  color: #000000;
+  font-size: 12px;
+  line-height: 1px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.Footer a.footer {
+  color: #c69f73;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+.Footer a.footer:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
