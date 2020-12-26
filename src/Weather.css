@@ -12,6 +12,16 @@
   max-width: 600px;
 }
 
+.Weather form {
+  padding: 30px 30px 1px 30px;
+}
+
+.Weather .searchIcon {
+  display: inline-block;
+  position: relative;
+  right: 30px;
+}
+
 .Weather .lastUpdated {
   font-size: 10px;
 }
