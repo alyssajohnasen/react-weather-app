@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
-import Loader from 'react-loader-spinner'
+import Loader from 'react-loader-spinner';
 import Forecast from "./Forecast";
 
 import "./Weather.css";
@@ -11,7 +12,7 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
-      date: "Saturday, December 5 | 10:00 AM",
+      date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       imgUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
@@ -32,7 +33,7 @@ export default function Weather(props) {
         <div className="form-row align-items-center">
           <div className="col-10">
             <input
-              type="text"
+              type="search"
               className="form-control form-control-sm shadow-sm border-0"
               placeholder="Enter a city"
               autoFocus="on"
@@ -61,7 +62,7 @@ export default function Weather(props) {
           </h1>
         </div>
       </div>
-      <div className="currentDateTime">{weatherData.date}</div>
+      <div className="currentDateTime"><FormattedDate date={weatherData.date} /></div>
       <div className="description">{weatherData.description}</div>
       <span className="currentTemperature">{Math.round(weatherData.temperature)}</span>
           <span className="units">
@@ -117,9 +118,7 @@ export default function Weather(props) {
       axios.get(apiUrl).then(handleResponse);
 
       return (
-        <div>Loading...
         <Loader type="Bars" color="#2b2f70" height={60} width={60} />
-        </div>
       );
     }  
 }
