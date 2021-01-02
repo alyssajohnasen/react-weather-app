@@ -16,7 +16,7 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
-      imgUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      icon: response.data.weather[0].icon,
       feelsLike: response.data.main.feels_like,
       sunrise: "6:00 AM",
       sunset: "5:50 PM",
@@ -78,7 +78,7 @@ export default function Weather(props) {
   } else {
       search();
       return (
-        <Loader type="Bars" color="#2b2f70" height={60} width={60} />
+        <Loader type="TailSpin" color="#2b2f70" height={60} width={60} />
       );
     }  
 }
