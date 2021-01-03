@@ -15,14 +15,14 @@ export default function Footer() {
         >
           Alyssa Johnasen
         </a>{" "}
-        and open-sourced on{" "}
+        and{" "}
         <a
           href="https://github.com/alyssajohnasen/react-weather-app"
           className="footer"
           target="_blank"
           rel="noopener noreferrer"
         >
-          GitHub
+          open-sourced on GitHub
         </a>
       </footer>
     </div>

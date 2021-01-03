@@ -1,0 +1,22 @@
+.WeatherUnits a {
+  color: #2b2f70;
+}
+
+.WeatherUnits .units {
+  color: #2b2f70;
+  font-size: 20px;
+  font-weight: 400;
+  left: 30px;
+  position: relative;
+  top: -40px;
+}
+
+.WeatherUnits .units .active {
+  cursor: default;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.WeatherUnits .units .active:hover {
+  text-decoration: none;
+}

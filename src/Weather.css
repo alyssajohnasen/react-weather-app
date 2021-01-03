@@ -51,24 +51,6 @@
   position: relative;
 }
 
-.Weather .units {
-  font-size: 20px;
-  font-weight: 400;
-  left: 30px;
-  position: relative;
-  top: -40px;
-}
-
-.Weather .units .active {
-  color: #ffffff;
-  cursor: default;
-  font-weight: 900;
-}
-
-.Weather .units .active:hover {
-  text-decoration: none;
-}
-
 .Weather .highLowTemps {
   line-height: 1px;
 }
