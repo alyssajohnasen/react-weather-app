@@ -1,59 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import ForecastDetails from "./ForecastDetails";
+import axios from "axios";
 
 import "./Forecast.css";
 
-export default function Forecast() {
-  return (
-    <div className="Forecast">
-      <div className="container forecastWrapper">
+export default function Forecast(props) {
+  const [loaded, setLoaded] = useState(false);
+  const [forecast, setForecast] = useState(null);
+
+  function displayForecast(response) {
+    setForecast(response.data);
+    setLoaded(true);
+  }
+
+  if (loaded && props.city === forecast.city.name) {
+    return (
+      <div className="Forecast">
+        <div className="container forecastWrapper">
           <div className="row row-cols-auto weather-forecast">
-            <div className="col">
-              <h5>
-                MON
-              </h5>
-              <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="weather" />
-              <div className="weather-forecast-temperature">
-                <strong><span id="forecast-max">70</span>°</strong> / <span id="forecast-min">65</span>°
-              </div>
-          </div>
-          <div className="col">
-              <h5>
-                TUE
-              </h5>
-              <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="weather" />
-              <div className="weather-forecast-temperature">
-                <strong><span id="forecast-max">70</span>°</strong> / <span id="forecast-min">65</span>°
-              </div>
-          </div>
-          <div className="col">
-              <h5>
-                WED
-              </h5>
-              <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="weather" />
-              <div className="weather-forecast-temperature">
-                <strong><span id="forecast-max">70</span>°</strong> / <span id="forecast-min">65</span>°
-              </div>
-          </div>
-          <div className="col">
-              <h5>
-                THU
-              </h5>
-              <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="weather" />
-              <div className="weather-forecast-temperature">
-                <strong><span id="forecast-max">70</span>°</strong> / <span id="forecast-min">65</span>°
-              </div>
-          </div>
-          <div className="col">
-              <h5>
-                FRI
-              </h5>
-              <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="weather" />
-              <div className="weather-forecast-temperature">
-                <strong><span id="forecast-max">70</span>°</strong> / <span id="forecast-min">65</span>°
-              </div>
-          </div>
-       </div> 
-      </div> 
-    </div>
-  );
+           <ForecastDetails data={forecast.list[0]} /> 
+           <ForecastDetails data={forecast.list[1]} /> 
+           <ForecastDetails data={forecast.list[2]} /> 
+           <ForecastDetails data={forecast.list[3]} /> 
+           <ForecastDetails data={forecast.list[4]} /> 
+           <ForecastDetails data={forecast.list[5]} /> 
+          </div> 
+        </div> 
+      </div>
+    );
+  } else {
+    let apiKey = "28aa11ac2c3547ae8dd36de6f31e399a";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(displayForecast);
+
+    return null;
+  }
 }

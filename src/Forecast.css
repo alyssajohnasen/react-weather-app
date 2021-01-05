@@ -1,30 +1,19 @@
 .Forecast .forecastWrapper {
   background: rgba(173, 173, 171, 0.2);
-  margin-top: 20px;
+  font-size: 12px;
+  margin: 20px auto;
   max-width: 600px;
-  padding: 20px;
+  padding: 10px;
+  text-align: center;
 }
 
 .Forecast .weather-forecast {
   padding: 20px;
-  text-align: center;
-  text-transform: uppercase;
 }
 
-.Forecast .weather-forecast h5 {
-  font-size: 14px;
-  font-weight: 200;
-  text-align: center;
-}
-
-.Forecast .weather-forecast img {
+.Forecast .weather-forecast canvas {
   display: block;
   height: 48px;
   margin: 0 auto;
   width: 48px;
-}
-
-.Forecast .weather-forecast-temperature {
-  font-size: 12px;
-  text-align: center;
 }
