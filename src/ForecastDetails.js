@@ -14,9 +14,9 @@ export default function ForecastDetails(props) {
     let maxTemperature = Math.round(props.data.main.temp_max);
     let minTemperature = Math.round(props.data.main.temp_min);
     if (props.unit === "celsius") {
-      maxTemperature = (maxTemperature - 32) * 5 / 9;
-      minTemperature = (minTemperature - 32) * 5 / 9;
-    } 
+      maxTemperature = Math.round(((maxTemperature - 32) * 5) / 9);
+      minTemperature = Math.round(((minTemperature - 32) * 5) / 9);
+    }
     return (
       `${maxTemperature}° / ${minTemperature}°`
     );

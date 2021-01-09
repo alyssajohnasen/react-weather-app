@@ -15,13 +15,13 @@ export default function WeatherInfo(props) {
       </div>
       <div className="currentDateTime"><FormattedDate date={props.data.date} /></div>
       <div className="description">{props.data.description}</div>
-      <WeatherUnits fahrenheit={props.data.temperature} />
-      <div className="highLowTemps">
-        <i className="fas fa-long-arrow-alt-up" />{" "}
-        <span className="maxTemp">{Math.round(props.data.high)}</span>° 
-        {" "}<i className="fas fa-long-arrow-alt-down" />{" "}
-        <span className="minTemp">{Math.round(props.data.low)}</span>°
-      </div> 
+      <WeatherUnits
+        fahrenheit={props.data.temperature}
+        high={props.data.high}
+        low={props.data.low}
+        unit={props.unit}
+        setUnit={props.setUnit}
+      />
 
       <div className="weatherWrapper">  
         <div className="row row-cols-2">
