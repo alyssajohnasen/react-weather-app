@@ -19,8 +19,8 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       feelsLike: response.data.main.feels_like,
-      sunrise: "6:00 AM",
-      sunset: "5:50 PM",
+      sunrise: new Date(response.data.sys.sunrise * 1000),
+      sunset: new Date(response.data.sys.sunset * 1000),
       high: response.data.main.temp_max,
       low: response.data.main.temp_min,
       humidity: response.data.main.humidity,
@@ -79,7 +79,10 @@ export default function Weather(props) {
   } else {
       search();
       return (
-        <Loader type="TailSpin" color="#2b2f70" height={60} width={60} />
+        <div>
+          LOADING...
+          <Loader type="TailSpin" color="#2b2f70" height={60} width={60} />
+        </div>
       );
     }  
 }

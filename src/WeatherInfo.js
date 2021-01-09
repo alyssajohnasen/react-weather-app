@@ -2,6 +2,8 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherUnits from "./WeatherUnits";
+import Sunrise from "./Sunrise";
+import Sunset from "./Sunset";
 
 export default function WeatherInfo(props) {
   return (
@@ -38,9 +40,9 @@ export default function WeatherInfo(props) {
                 </div>
 
                 <div className="sunrise-sunset">
-                  <li><i className="fas fa-sun"></i> Sunrise: <span>{props.data.sunrise}</span> {" "}</li> 
+                  <li><i className="fas fa-sun"></i> Sunrise: <span><Sunrise sunrise={props.data.sunrise} /></span> {" "}</li> 
                   <li><i className="fas fa-moon"></i> Sunset:{" "}
-                  <span>{props.data.sunset}</span></li>
+                  <span><Sunset sunset={props.data.sunset} /></span></li>
                 </div>
 
                 <div className="humidity-wind">
