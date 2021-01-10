@@ -40,9 +40,9 @@ export default function WeatherInfo(props) {
                 </div>
 
                 <div className="sunrise-sunset">
-                  <li><i className="fas fa-sun"></i> Sunrise: <span><Sunrise sunrise={props.data.sunrise} timezone={props.data.timezone} /></span> {" "}</li> 
+                  <li><i className="fas fa-sun"></i> Sunrise: <span><Sunrise sunrise={props.data.sunrise} /></span> {" "}</li> 
                   <li><i className="fas fa-moon"></i> Sunset:{" "}
-                  <span><Sunset sunset={props.data.sunset} timezone={props.data.timezone} /></span></li>
+                  <span><Sunset sunset={props.data.sunset} /></span></li>
                 </div>
 
                 <div className="humidity-wind">
