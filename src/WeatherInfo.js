@@ -15,7 +15,7 @@ export default function WeatherInfo(props) {
           </h1>
         </div>
       </div>
-      <div className="currentDateTime"><FormattedDate date={props.data.date} /></div>
+      <div className="currentDateTime"><FormattedDate timezone={props.data.timezone} /></div>
       <div className="description">{props.data.description}</div>
       <WeatherUnits
         fahrenheit={props.data.temperature}
@@ -40,9 +40,9 @@ export default function WeatherInfo(props) {
                 </div>
 
                 <div className="sunrise-sunset">
-                  <li><i className="fas fa-sun"></i> Sunrise: <span><Sunrise sunrise={props.data.sunrise} /></span> {" "}</li> 
+                  <li><i className="fas fa-sun"></i> Sunrise: <span><Sunrise sunrise={props.data.sunrise} timezone={props.data.timezone} /></span> {" "}</li> 
                   <li><i className="fas fa-moon"></i> Sunset:{" "}
-                  <span><Sunset sunset={props.data.sunset} /></span></li>
+                  <span><Sunset sunset={props.data.sunset} timezone={props.data.timezone} /></span></li>
                 </div>
 
                 <div className="humidity-wind">

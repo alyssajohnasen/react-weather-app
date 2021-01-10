@@ -3,8 +3,10 @@ import WeatherIcon from "./WeatherIcon";
 
 export default function ForecastDetails(props) {
   function hours() {
-    let date = new Date(props.data.dt * 1000);
-    let hours = date.getHours();
+    let time = new Date(props.data.dt * 1000);
+    let localTimeOffset = time.getTimezoneOffset() * 60;
+    time.setSeconds(time.getSeconds() + localTimeOffset + props.timezone);
+    let hours = time.getHours();
     return (
       `${hours}:00`
     );

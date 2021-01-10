@@ -18,12 +18,12 @@ export default function Forecast(props) {
       <div className="Forecast">
         <div className="container forecastWrapper">
           <div className="row row-cols-auto weather-forecast">
-           <ForecastDetails data={forecast.list[0]} unit={props.unit} /> 
-           <ForecastDetails data={forecast.list[1]} unit={props.unit} /> 
-           <ForecastDetails data={forecast.list[2]} unit={props.unit} /> 
-           <ForecastDetails data={forecast.list[3]} unit={props.unit} /> 
-           <ForecastDetails data={forecast.list[4]} unit={props.unit} /> 
-           <ForecastDetails data={forecast.list[5]} unit={props.unit} /> 
+           <ForecastDetails data={forecast.list[0]} timezone={props.timezone} unit={props.unit} /> 
+           <ForecastDetails data={forecast.list[1]} timezone={props.timezone} unit={props.unit} /> 
+           <ForecastDetails data={forecast.list[2]} timezone={props.timezone} unit={props.unit} /> 
+           <ForecastDetails data={forecast.list[3]} timezone={props.timezone} unit={props.unit} /> 
+           <ForecastDetails data={forecast.list[4]} timezone={props.timezone} unit={props.unit} /> 
+           <ForecastDetails data={forecast.list[5]} timezone={props.timezone} unit={props.unit} /> 
           </div> 
         </div> 
       </div>

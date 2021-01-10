@@ -1,10 +1,5 @@
 .Weather {
-  background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
-    radial-gradient(
-      91% 146%,
-      rgba(255, 255, 255, 0.5) 47%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   background-blend-mode: screen;
   border-radius: 5px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);

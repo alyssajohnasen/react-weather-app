@@ -14,13 +14,13 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
-      date: new Date(response.data.dt * 1000),
+      timezone: response.data.timezone,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       feelsLike: response.data.main.feels_like,
-      sunrise: new Date(response.data.sys.sunrise * 1000),
-      sunset: new Date(response.data.sys.sunset * 1000),
+      sunrise: response.data.sys.sunrise,
+      sunset: response.data.sys.sunset,
       high: response.data.main.temp_max,
       low: response.data.main.temp_min,
       humidity: response.data.main.humidity,
@@ -73,7 +73,7 @@ export default function Weather(props) {
         </div>
       </form>
       <WeatherInfo data={weatherData} unit={unit} setUnit={setUnit} /> 
-      <Forecast city={weatherData.city} unit={unit} />
+      <Forecast city={weatherData.city} timezone={weatherData.timezone} unit={unit} />
     </div>
   );
   } else {
