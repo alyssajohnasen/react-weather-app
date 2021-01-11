@@ -59,7 +59,7 @@
 
 .Weather .details {
   border-bottom: thin solid #2b2f70;
-  max-width: 120px;
+  max-width: 90px;
   margin-bottom: 5px;
   text-align: start;
 }

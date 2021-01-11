@@ -17,7 +17,7 @@ export default function Forecast(props) {
     return (
       <div className="Forecast">
         <div className="container forecastWrapper">
-          <div className="row row-cols-auto weather-forecast">
+          <div className="row row-cols-6 weather-forecast">
            <ForecastDetails data={forecast.list[0]} timezone={props.timezone} unit={props.unit} /> 
            <ForecastDetails data={forecast.list[1]} timezone={props.timezone} unit={props.unit} /> 
            <ForecastDetails data={forecast.list[2]} timezone={props.timezone} unit={props.unit} /> 
