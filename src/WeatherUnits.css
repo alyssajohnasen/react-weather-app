@@ -1,3 +1,44 @@
+.WeatherUnits .currentTemperature {
+  font-size: 75px;
+  font-weight: 900;
+  left: 20px;
+  line-height: 80px;
+  position: relative;
+}
+
+.Weather .weatherWrapper {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.WeatherUnits .highLowTemps {
+  line-height: 1px;
+}
+
+.WeatherUnits img.currentTempIcon {
+  display: block;
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+}
+
+.WeatherUnits .details {
+  border-bottom: thin solid #2b2f70;
+  max-width: 90px;
+  margin-bottom: 5px;
+  text-align: start;
+}
+
+.WeatherUnits ul {
+  list-style: none;
+  text-align: start;
+  padding: 0;
+}
+
+.WeatherUnits li {
+  font-size: 10px;
+}
+
 .WeatherUnits a {
   color: #2b2f70;
 }

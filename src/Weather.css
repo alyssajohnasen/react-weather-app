@@ -17,10 +17,6 @@
   right: 40px;
 }
 
-.Weather .lastUpdated {
-  font-size: 10px;
-}
-
 .Weather .currentDateTime {
   font-size: 18px;
   font-weight: 200;
@@ -31,45 +27,4 @@
   font-weight: 500;
   line-height: 40px;
   text-transform: uppercase;
-}
-
-.Weather .weatherWrapper {
-  margin-top: 20px;
-  padding: 20px;
-}
-
-.Weather .currentTemperature {
-  font-size: 75px;
-  font-weight: 900;
-  left: 20px;
-  line-height: 80px;
-  position: relative;
-}
-
-.Weather .highLowTemps {
-  line-height: 1px;
-}
-
-.Weather img.currentTempIcon {
-  display: block;
-  margin: 0 auto;
-  height: 100px;
-  width: 100px;
-}
-
-.Weather .details {
-  border-bottom: thin solid #2b2f70;
-  max-width: 90px;
-  margin-bottom: 5px;
-  text-align: start;
-}
-
-.Weather ul {
-  list-style: none;
-  text-align: start;
-  padding: 0;
-}
-
-.Weather li {
-  font-size: 10px;
 }
